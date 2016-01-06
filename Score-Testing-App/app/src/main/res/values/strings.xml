@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Score-Testing-App</string>
+
+    <string-array name="Member_names">
+        <item>Roger Federer</item>
+        <item>Rafael Nadal</item>
+        <item>Djokovic</item>
+        <item>Lyon Hewitt</item>
+        <item>Tsonga</item>
+        <item>Gael Monfills</item>
+    </string-array>
+
+    <string-array name="ranking">
+        <item>19</item>
+        <item>20</item>
+        <item>11</item>
+        <item>15</item>
+        <item>30</item>
+        <item>24</item>
+    </string-array>
 </resources>
