@@ -1,0 +1,43 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#4950E98B"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Set 1"
+        android:textSize="23dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:id="@+id/set_number"
+        android:paddingRight="8dp"
+        android:background="#4950E98B"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:id="@+id/player_one_points"
+        android:textSize="23dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:background="#4950E98B"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="23dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:background="#4950E98B"
+        android:id="@+id/player_two_points"
+        android:padding="5dp"/>
+</LinearLayout>

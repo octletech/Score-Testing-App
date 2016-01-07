@@ -43,11 +43,11 @@
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="6dp"
             android:padding="12dp"
-            android:textColor="@color/accent"
+            android:textColor="@color/white"
             android:text="Create Account"/>
 
         <TextView android:id="@+id/link_login"
@@ -58,9 +58,5 @@
             android:textColor="@android:color/holo_blue_dark"
             android:gravity="center"
             android:textSize="16dip"/>
-
-
-
     </LinearLayout>
-
     </ScrollView>

@@ -1,5 +1,6 @@
 package com.esporte;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,6 +26,9 @@ EditText pointsPerSets;
                 String PointsPerSet = pointsPerSets.getText().toString();
                 String NoOfSets = noSets.getText().toString();
                 Toast.makeText(MatchTypeActivity.this,""+NoOfSets+PointsPerSet,Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MatchTypeActivity.this,ScoreCardActivity.class);
+                startActivity(intent);
             }
         });
     }

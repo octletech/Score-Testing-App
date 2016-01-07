@@ -2,13 +2,16 @@ package com.esporte;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.esporte.volley.VolleyRequests;
+import com.esporte.volley.VolleyRes;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     Button signup;
@@ -65,10 +68,22 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog.dismiss();
         validate();
         Toast.makeText(SignUpActivity.this,""+Name+Email,Toast.LENGTH_SHORT).show();
-        MySQLiteOpenHelper helper = new MySQLiteOpenHelper(SignUpActivity.this);
-        helper.addContact(Name,Email);
-        Intent intent = new Intent(this,LoginActivity.class);
-        startActivity(intent);
+        VolleyRes response = new VolleyRes() {
+            @Override
+            public void onSuccessResponse() {
+                MySQLiteOpenHelper helper = new MySQLiteOpenHelper(SignUpActivity.this);
+                helper.addContact(Name,Email);
+                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onFailureResponse() {
+
+            }
+        };
+
+        VolleyRequests.createUser(Name, Email, this, response);
     }
 
     public boolean validate() {
